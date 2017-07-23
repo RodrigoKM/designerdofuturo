@@ -54,8 +54,47 @@
     
     <div class="jumbotron">
         <div class="container">
-            <h1>Hello, world!</h1>
-            <p>Contents ...</p>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                <form name="cadastro" action = "#" method="post" id="formulario" role="form">
+
+                        <legend>
+                            <h2 class="primary-color">Inscreva-se</h2>
+                        </legend>
+
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade">
+                        </div>
+
+                        <div class="form-group">
+                                            <label  for="areaDeInteresse"> Area De Interesse</label>									
+                                             <select class="form-control" type="text" class="input" name="areaInteresse"  >
+                                             <option value="1">Designer</option>
+                                             <option value="2">Programador</option>
+                                             <option value="3">Vendas</option>
+                                             <option value="4">Markting</option>
+                                             </select>
+                        </div>
+
+
+
+
+                        <button name="cadastro" value="Cadastrar" type="submit" class="btn btn-primary btn-block" onClick="alertInfo()">Inscreva-se</button>
+
+                    </form>
+                </div>
+            </div>
             <p>
                 <a class="btn btn-primary btn-lg">Learn more</a>
             </p>

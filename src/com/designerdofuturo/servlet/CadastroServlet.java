@@ -47,7 +47,7 @@ public class CadastroServlet extends HttpServlet {
 		
 		String nomeCompleto  = request.getParameter("nome").concat(" ").concat(request.getParameter("last_name"));
 		String email  = request.getParameter("email");
-		String area  = request.getParameter("area");
+		String stack  = request.getParameter("stack");
 		String ip = request.getRemoteAddr();
 		
 		//TestaEmail teste = new TestaEmail();
@@ -70,7 +70,7 @@ public class CadastroServlet extends HttpServlet {
 
 						
 		}
-			Cadastro CadastroPessoa = new Cadastro(nomeCompleto,  email,  area, ip);//cria o objeto cadastro;
+			Cadastro CadastroPessoa = new Cadastro(nomeCompleto,  email,  stack, ip);//cria o objeto cadastro;
 			CadastroDAO cadastro = new CadastroDAO();
 			cadastro.adicionaCadastro(CadastroPessoa); 
 			

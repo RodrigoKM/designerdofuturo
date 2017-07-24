@@ -5,6 +5,7 @@
 	<title>Designer do Futuro</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="StyleCadastro.css" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
@@ -17,22 +18,18 @@
 </head>
 
 <body>
-	<div class="parallax-container hide-on-small-only">
+	<div class="parallax-container">
 		<div class="parallax"><img src="img/bannerlogo.jpg"></div>
-	</div>
-
-	<div class="parallax-container hide-on-med-and-up">
-		<div class="parallax"><img class="img-responsive" src="img/banner-mobile.png" width="300"></div>
 	</div>
 
 	<div class="row">
 		<div class="col s12 menu-color">
 			<ul class="tabs tabs-fixed-width transparent">
 				<li class="tab col s2"></li>
-				<li class="tab col s2"><a href="#test1">SOBRE</a></li>
+				<li class="tab col s2"><a class="active" href="#test1">SOBRE</a></li>
 				<li class="tab col s2"><a href="#test2">QUIZ</a></li>
 				<li class="tab col s2"><a href="#test3">E-BOOKS</a></li>
-				<li class="tab col s2"><a class="active" href="#test4">ARTIGOS</a></li>
+				<li class="tab col s2"><a href="#test4">ARTIGOS</a></li>
 				<li class="tab col s2"><a href="#test5">CONTATOS</a></li>
 				<li class="tab col s2"></li>
 			</ul>
@@ -40,76 +37,58 @@
 	</div>
 
 	<div class="container">
-		<div id="test1" class="col s12">
-			<h1>Sobre</h1>
-		</div>
-
-		<div id="test2" class="col s12">
-			<h1>Quiz</h1>
-		</div>
-
-		<div id="test3" class="col s12">
-			<h1>E-Books</h1>
-		</div>
-
-		<div id="test4" class="col s12">
-			<!-- Example row of columns -->
-			<div class="row">
-				<div class="col s12 m6">
-					<div class="card horizontal">
-						<div class="card-image">
-							<img src="https://lorempixel.com/100/190/nature/6">
-						</div>
-						<div class="card-stacked">
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Card Title</span>
-								<p>I am a very simple card. I am good at containing small bits of information.</p>
-							</div>
-							<div class="card-action">
-								<button type="submit" class="btn grad-btn">LEIA MAIS</button>
-							</div>
-						</div>
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col s12 m6">
+				<div class="card horizontal">
+					<div class="card-image">
+						<img src="https://lorempixel.com/100/190/nature/6">
 					</div>
-				</div>
-
-				<div class="col s12 m6">
-					<div class="card horizontal">
-						<div class="card-image">
-							<img src="https://lorempixel.com/100/190/nature/6">
+					<div class="card-stacked">
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Card Title</span>
+							<p>I am a very simple card. I am good at containing small bits of information.</p>
 						</div>
-						<div class="card-stacked">
-							<div class="card-content">
-								<p>I am a very simple card. I am good at containing small bits of information.</p>
-							</div>
-							<div class="card-action">
-								<button type="submit" class="btn grad-btn">LEIA MAIS</button>
-							</div>
+						<div class="card-action">
+							<button type="submit" class="btn grad-btn">LEIA MAIS</button>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col s12 m6">
-					<div class="card horizontal">
-						<div class="card-image">
-							<img src="https://lorempixel.com/100/190/nature/6">
+			<div class="col s12 m6">
+				<div class="card horizontal">
+					<div class="card-image">
+						<img src="https://lorempixel.com/100/190/nature/6">
+					</div>
+					<div class="card-stacked">
+						<div class="card-content">
+							<p>I am a very simple card. I am good at containing small bits of information.</p>
 						</div>
-						<div class="card-stacked">
-							<div class="card-content">
-								<p>I am a very simple card. I am good at containing small bits of information.</p>
-							</div>
-							<div class="card-action">
-								<button type="submit" class="btn grad-btn">LEIA MAIS</button>
-							</div>
+						<div class="card-action">
+							<button type="submit" class="btn grad-btn">LEIA MAIS</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="test5" class="col s12">
-			<h1>Contatos</h1>
+		<div class="row">
+			<div class="col s12 m6">
+				<div class="card horizontal">
+					<div class="card-image">
+						<img src="https://lorempixel.com/100/190/nature/6">
+					</div>
+					<div class="card-stacked">
+						<div class="card-content">
+							<p>I am a very simple card. I am good at containing small bits of information.</p>
+						</div>
+						<div class="card-action">
+							<button type="submit" class="btn grad-btn">LEIA MAIS</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<hr>
@@ -117,23 +96,26 @@
 			<div class="col-md-offset-6">
 				<form action="cadastro" method="POST" role="form">
 					<div class="input-field col s6">
-						<input id="nome" name="nome" pattern="[A-Za-z]{2,}" type="text" class="validate" required title="Preencha apenas com letras">
-						<label class="primary-color" for="nome" data-error="Nome Inválido" data-success="Ok!">Nome</label>
+						<input id="nome" name="nome" pattern="[A-Za-z\s]{0,}" required="required"
+							title="Preencha apenas com letras" type="text" class="validate">
+						<label class="primary-color" for="nome">Nome</label>
 					</div>
 
 					<div class="input-field col s6">
-						<input id="last_name" name="last_name" pattern="[A-Za-z]{2,}" type="text" class="validate" required title="Preencha apenas com letras">
-						<label class="primary-color" for="last_name" data-error="Sobrenome Inválido" data-success="Ok!">Sobrenome</label>
+						<input id="last_name" name="last_name" pattern="[A-Za-z\s]{0,}" required="required"
+							title="Preencha apenas com letras" type="text" class="validate">
+						<label class="primary-color" for="last_name">Sobrenome</label>
 					</div>
 
 					<div class="input-field col s12">
-						<input id="email" name="email" type="email" class="validate" required>
-						<label class="primary-color" for="email" data-error="Email Inválido" data-success="Ok!">Email</label>
+						<input id="email" name="email" type="email" class="validate" required="required">
+						<label class="primary-color" for="email"
+							data-error="e-mail inválido" data-success="e-mail válido">Email</label>
 					</div>
 
 					<div class="input-field col s12">
-						<select name="stack" class="primary-color" required>
-								<option value="" disabled selected>Escolha uma opção</option>
+						<select name="stack" class="primary-color" required="required">
+								<option value="" disabled selected></option>
 								<option value="hipster">Design</option>
 								<option value="hacker">Programação</option>
 								<option value="hyper">Marketing</option>
@@ -191,14 +173,15 @@
 
 	<script>
 		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 		ga('create', 'UA-103062881-1', 'auto');
 		ga('send', 'pageview');
+
 	</script>
 </body>
 

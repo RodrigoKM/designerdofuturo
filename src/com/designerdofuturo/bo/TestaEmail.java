@@ -1,40 +1,23 @@
 package com.designerdofuturo.bo;
 
-//import br.com.scopus.beans.DadosLogin;
-//import br.com.scopus.dao.LoginDAO;
+import com.designerdofuturo.bean.*;
+import com.designerdofuturo.dao.*;
 
 public class TestaEmail {
-	
-	
-	
-	public  Boolean testaEmail(String Email){
-		
-//	     CadastroDAO testar = new CadastroDAO();
-//	     DadosLogin teste = null;
-//	     teste = testar.QueryLogin(Email);
-//		
-//		if(teste == null) {
-//			
-//			return false;
-//			
-//		}
-//		
-//		else{
-			
+
+	public Boolean testaEmail(String Email) {
+
+		CadastroDAO testarEmail = new CadastroDAO();
+		Cadastro cadastro = null;
+		cadastro = testarEmail.QueryEmail(Email);
+		if (cadastro == null) {
+			return false;
+		}
+
+		else {
 			return true;
-			
-	//	}
-		
-		
-		
-		
-		
-		
+		}
+
 	}
-	
-	
-	
-	
-	
 
 }

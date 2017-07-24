@@ -13,6 +13,8 @@ public class Cadastro {
 		this.stack = stack;
 		this.ip = ip;
 	}
+	
+	public Cadastro() {	}
 
 	public String getNomeCompleto() {
 		return nomeCompleto;

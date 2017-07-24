@@ -3,9 +3,11 @@ package com.designerdofuturo.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.designerdofuturo.bean.Cadastro;
 import com.designerdofuturo.conexaoBanco.ConexaoMySQL;
+import com.designerdofuturo.bean.*;
 
 public class CadastroDAO {
 
@@ -35,4 +37,30 @@ public class CadastroDAO {
 			throw new RuntimeException(u);
 		}
 	}
+	
+	
+    public Cadastro QueryEmail(String email){
+	      
+   	 try {
+	    	    
+            Statement stmt = connection.createStatement();
+            java.sql.ResultSet result;
+            
+            
+            result = stmt.executeQuery("SELECT * FROM lead WHERE email = '"+email+"'");
+            while ( result.next() ) {
+            	
+	     		Cadastro cadastro = new Cadastro();		
+	     		cadastro.setEmail(result.getString("email"));  
+	     		return cadastro;	                	                 
+            }
+            connection.close();
+        } catch (Exception e) {
+       	 System.err.println("Got an exception! ");
+       	 System.err.println(e.getMessage());
+        }
+		return null;
+        
+    }
+   
 }

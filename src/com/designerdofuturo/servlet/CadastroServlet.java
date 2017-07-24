@@ -12,6 +12,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.designerdofuturo.bo.TestaEmail;
+
+import com.designerdofuturo.dao.CadastroDAO;
+
+import com.designerdofuturo.bean.*;
+
+
 
 
 /**
@@ -44,6 +51,36 @@ public class CadastroServlet extends HttpServlet {
 	}
 
 	private void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+
+		
+		String nomeCompleto  = request.getParameter("nome");
+		String email  = request.getParameter("email");
+		String area  = request.getParameter("area");
+		String ip = request.getRemoteAddr();
+		
+		//TestaEmail teste = new TestaEmail();
+		//if (teste.testa_email(email)){
+		//	
+	//		request.getRequestDispatcher("/ErroEmailExistente.jsp?erro=1").forward(request, response); 
+			
+	//	}
+		
+	//	else{
+			
+			try{
+
+				
+			}
+			catch(Exception e){
+				throw new ServletException(e);
+		//	}
+				
+
+						
+		}
+			Cadastro CadastroPessoa = new Cadastro(nomeCompleto,  email,  area, ip);//cria o objeto cadastro;
+			CadastroDAO cadastro = new CadastroDAO();
+			cadastro.adicionaCadastro(CadastroPessoa); 
+			
 	}
 }

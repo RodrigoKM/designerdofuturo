@@ -38,9 +38,9 @@
    						<td align="left"><input type="email" name="email" required></td>
 					</tr>	
 					<tr>			
-						<td><label for="estado"><span class="req">*</span>Área de interesse:</label></td>
+						<td><label for="area"><span class="req">*</span>Área de interesse:</label></td>
 						<td align="left">
-							<select name="estado" required>
+							<select name="area" required>
 								<option value="">Selecione</option>
 								<option value="design">Design</option>
 								<option value="programação">Programação</option>

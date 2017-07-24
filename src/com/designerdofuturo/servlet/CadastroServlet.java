@@ -56,7 +56,7 @@ public class CadastroServlet extends HttpServlet {
 		TestaEmail testaEmail = new TestaEmail();
 		if (testaEmail.testaEmail(email)) {
 
-			request.getRequestDispatcher("/ErroEmailExistente.jsp?erro=1").forward(request, response);
+			request.getRequestDispatcher("/index.html?status=2").forward(request, response);
 
 		} else {
 
@@ -68,6 +68,8 @@ public class CadastroServlet extends HttpServlet {
 			} catch (Exception e) {
 				throw new ServletException(e);
 			}
+			
+			request.getRequestDispatcher("/index.html?status=1").forward(request, response);
 
 		}
 

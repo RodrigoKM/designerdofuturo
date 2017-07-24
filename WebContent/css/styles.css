@@ -45,3 +45,11 @@ footer.page-footer {
 .tabs .tab.disabled a,.tabs .tab.disabled a:hover {
 	color:rgba(102,147,153,0.7);	
 }
+
+.parallax-container {
+    height: 300px;
+}        
+
+hr {
+    margin: 3rem;
+}

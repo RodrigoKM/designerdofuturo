@@ -23,12 +23,12 @@ public class ConexaoMySQL {
 			Class.forName(driverName);
 
 			// Configurando a nossa conexão com um banco de dados//
-			String serverName = "sql10.freemysqlhosting.net"; // caminho do servidor do BD
-			String mydatabase = "sql10186627"; // nome do seu banco de dados
+			String serverName = "127.0.0.1"; // caminho do servidor do BD
+			String mydatabase = "localdb"; // nome do seu banco de dados
 			String port = "3306"; // nome do seu banco de dados
 			String url = "jdbc:mysql://".concat(serverName).concat(":").concat(port).concat("/").concat(mydatabase);
-			String username = "sql10186627"; // nome de um usuário de seu BD
-			String password = "xvUNzzXdzj"; // sua senha de acesso
+			String username = "azure"; // nome de um usuário de seu BD
+			String password = "6#vWHD_$"; // sua senha de acesso
 			connection = DriverManager.getConnection(url, username, password);
 
 			// Testa sua conexão//
@@ -42,6 +42,7 @@ public class ConexaoMySQL {
 			System.out.println("O driver expecificado nao foi encontrado.");
 			return null;
 		} catch (SQLException e) { // Não conseguindo se conectar ao banco
+			e.printStackTrace();
 			System.out.println("Nao foi possivel conectar ao Banco de Dados.");
 			return null;
 		}

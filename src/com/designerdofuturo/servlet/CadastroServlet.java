@@ -1,22 +1,14 @@
 package com.designerdofuturo.servlet;
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import com.designerdofuturo.bo.TestaEmail;
-
+import com.designerdofuturo.bean.Cadastro;
 import com.designerdofuturo.dao.CadastroDAO;
-
-import com.designerdofuturo.bean.*;
 
 
 
@@ -53,7 +45,7 @@ public class CadastroServlet extends HttpServlet {
 	private void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		
-		String nomeCompleto  = request.getParameter("nome");
+		String nomeCompleto  = request.getParameter("nome").concat(" ").concat(request.getParameter("last_name"));
 		String email  = request.getParameter("email");
 		String area  = request.getParameter("area");
 		String ip = request.getRemoteAddr();

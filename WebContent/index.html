@@ -17,8 +17,12 @@
 </head>
 
 <body>
-	<div class="parallax-container">
+	<div class="parallax-container hide-on-small-only">
 		<div class="parallax"><img src="img/bannerlogo.jpg"></div>
+	</div>
+
+	<div class="parallax-container hide-on-med-and-up">
+		<div class="parallax"><img class="img-responsive" src="img/banner-mobile.png" width="300"></div>
 	</div>
 
 	<div class="row">
@@ -96,22 +100,22 @@
 				<form action="cadastro" method="POST" role="form">
 					<h2 class="center">Cadastro</h2>
 					<div class="input-field col s6">
-						<input id="nome" name="nome" type="text" class="validate">
-						<label class="primary-color" for="nome">Name</label>
+						<input id="nome" name="nome" pattern="[A-Za-z]{2,}" type="text" class="validate" required>
+						<label class="primary-color" for="nome" data-error="wrong" data-success="right">Name</label>
 					</div>
 
 					<div class="input-field col s6">
-						<input id="last_name" name="last_name" type="text" class="validate">
-						<label class="primary-color" for="last_name">Last Name</label>
+						<input id="last_name" name="last_name" pattern="[A-Za-z]{2,}" type="text" class="validate" required>
+						<label class="primary-color" for="last_name" data-error="wrong" data-success="right">Last Name</label>
 					</div>
 
 					<div class="input-field col s12">
-						<input id="email" name="email" type="email" class="validate">
+						<input id="email" name="email" type="email" class="validate" required>
 						<label class="primary-color" for="email" data-error="wrong" data-success="right">Email</label>
 					</div>
 
 					<div class="input-field col s12">
-						<select name="stack" class="primary-color">
+						<select name="stack" class="primary-color" required>
 								<option value="" disabled selected>Choose your option</option>
 								<option value="hipster">Design</option>
 								<option value="hacker">Programação</option>

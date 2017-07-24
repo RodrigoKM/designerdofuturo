@@ -24,8 +24,8 @@ public class ConexaoMySQL {
 
 			// Configurando a nossa conexão com um banco de dados//
 			String serverName = "127.0.0.1"; // caminho do servidor do BD
-			String mydatabase = "localdb"; // nome do seu banco de dados
-			String port = "3306"; // nome do seu banco de dados
+			String mydatabase = "designerdofuturo"; // nome do seu banco de dados
+			String port = "49717"; // nome do seu banco de dados
 			String url = "jdbc:mysql://".concat(serverName).concat(":").concat(port).concat("/").concat(mydatabase);
 			String username = "azure"; // nome de um usuário de seu BD
 			String password = "6#vWHD_$"; // sua senha de acesso

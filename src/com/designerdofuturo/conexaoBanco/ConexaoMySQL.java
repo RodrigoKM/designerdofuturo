@@ -26,7 +26,7 @@ public class ConexaoMySQL {
 			// Configurando a nossa conexão com um banco de dados//
 			String serverName = "127.0.0.1"; //caminho do servidor do BD 
 			String mydatabase = "localdb"; //nome do seu banco de dados 
-			String url = "jdbc:mysql://127.0.0.1/localdb"; 
+			String url = "jdbc:mysql://127.0.0.1:49717/localdb"; 
 			String username = "azure"; //nome de um usuário de seu BD 
 			String password = "6#vWHD_$"; //sua senha de acesso 
 			connection = DriverManager.getConnection(url, username, password);

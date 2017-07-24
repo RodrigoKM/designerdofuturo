@@ -1,4 +1,5 @@
 package com.designerdofuturo.servlet;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -9,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.designerdofuturo.bean.Cadastro;
 import com.designerdofuturo.dao.CadastroDAO;
-
-
-
 
 /**
  * Servlet implementation class CadastroServlet
@@ -44,35 +42,30 @@ public class CadastroServlet extends HttpServlet {
 
 	private void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		
-		String nomeCompleto  = request.getParameter("nome").concat(" ").concat(request.getParameter("last_name"));
-		String email  = request.getParameter("email");
-		String stack  = request.getParameter("stack");
+		String nomeCompleto = request.getParameter("nome").concat(" ").concat(request.getParameter("last_name"));
+		String email = request.getParameter("email");
+		String stack = request.getParameter("stack");
 		String ip = request.getRemoteAddr();
-		
-		//TestaEmail teste = new TestaEmail();
-		//if (teste.testa_email(email)){
-		//	
-	//		request.getRequestDispatcher("/ErroEmailExistente.jsp?erro=1").forward(request, response); 
-			
-	//	}
-		
-	//	else{
-			
-			try{
 
-				
-			}
-			catch(Exception e){
-				throw new ServletException(e);
-		//	}
-				
+		// TestaEmail teste = new TestaEmail();
+		// if (teste.testa_email(email)){
+		//
+		// request.getRequestDispatcher("/ErroEmailExistente.jsp?erro=1").forward(request,
+		// response);
 
-						
+		// }
+
+		// else{
+
+		try {
+
+		} catch (Exception e) {
+			throw new ServletException(e);
+			// }
+
 		}
-			Cadastro CadastroPessoa = new Cadastro(nomeCompleto,  email,  stack, ip);//cria o objeto cadastro;
-			CadastroDAO cadastro = new CadastroDAO();
-			cadastro.adicionaCadastro(CadastroPessoa); 
-			
+		Cadastro CadastroPessoa = new Cadastro(nomeCompleto, email, stack, ip);// cria o objeto cadastro;
+		CadastroDAO cadastro = new CadastroDAO();
+		cadastro.adicionaCadastro(CadastroPessoa);
 	}
 }

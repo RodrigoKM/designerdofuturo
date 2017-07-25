@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 .primary-color {
@@ -52,4 +53,12 @@ footer.page-footer {
 
 hr {
     margin: 3rem;
+}
+
+article>div>div>p {
+    padding: 16px 0 0;
+}
+
+article>div>div>h4 {
+    padding-top: 35px;
 }

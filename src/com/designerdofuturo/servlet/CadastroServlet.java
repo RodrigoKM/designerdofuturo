@@ -50,17 +50,20 @@ public class CadastroServlet extends HttpServlet {
 		String nomeCompleto = request.getParameter("nome").concat(" ").concat(request.getParameter("last_name"));
 		String email = request.getParameter("email");
 		String stack = request.getParameter("stack");
-
+		String ip = "0";
         String remoteAddr = "";
 
         if (request != null) {
             remoteAddr = request.getHeader("X-FORWARDED-FOR");
             if (remoteAddr == null || "".equals(remoteAddr)) {
                 remoteAddr = request.getRemoteAddr();
+                if(remoteAddr.length() <= 15) {
+                	ip = remoteAddr;         	
+                }else {      
+                ip = remoteAddr.substring(0, remoteAddr.indexOf(":"));}
             }
         }
-   
-        String ip = remoteAddr.substring(0, remoteAddr.indexOf(":"));
+ 
   
 		TestaEmail testaEmail = new TestaEmail();
 		if (testaEmail.testaEmail(email)) {
@@ -76,6 +79,7 @@ public class CadastroServlet extends HttpServlet {
 
 			} catch (Exception e) {
 				throw new ServletException(e);
+				
 			}
 			
 			request.getRequestDispatcher("/index.html?status=1").forward(request, response);

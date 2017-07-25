@@ -25,14 +25,14 @@
 		<div class="parallax"><img class="img-responsive" src="img/banner-mobile.png" width="300"></div>
 	</div>
 
-	<div class="row">
+	<div class="row menu-site">
 		<div class="col s12 menu-color">
 			<ul class="tabs tabs-fixed-width transparent">
 				<li class="tab col s2"></li>
-				<li class="tab col s2"><a href="#test1">SOBRE</a></li>
+				<li class="tab col s2 disabled"><a href="#test1">SOBRE</a></li>
 				<li class="tab col s2 disabled"><a href="#test2">QUIZ</a></li>
 				<li class="tab col s2"><a class="active" href="#test4">ARTIGOS</a></li>
-				<li class="tab col s2"><a href="#test3">E-BOOKS</a></li>
+				<li class="tab col s2 disabled"><a href="#test3">E-BOOKS</a></li>
 				<li class="tab col s2"><a href="#test5">CONTATOS</a></li>
 				<li class="tab col s2"></li>
 			</ul>
@@ -66,7 +66,8 @@
 						<div class="card-stacked">
 							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">5 Dicas de ouro para ser mais criativo</span>
-								<p>Nossos especialistas do Designer do Futuro elaboraram uma lista com 5 dicas de ouro para que você possa trabalhar sua criatividade.</p>
+								<p>Nossos especialistas do Designer do Futuro elaboraram uma lista com 5 dicas de ouro para que você possa trabalhar
+									sua criatividade.</p>
 							</div>
 							<div class="card-action">
 								<!--button type="submit" class="btn grad-btn">LEIA MAIS</button-->
@@ -83,7 +84,8 @@
 						<div class="card-stacked">
 							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">Designer precisa saber programação?</span>
-								<p>Nós do Designer do Futuro chegamos a conclusão que seria impossível responder a essa pergunta sem antes termos as respostas de outras perguntas, tão importantes quanto.</p>
+								<p>Nós do Designer do Futuro chegamos a conclusão que seria impossível responder a essa pergunta sem antes termos as
+									respostas de outras perguntas, tão importantes quanto.</p>
 							</div>
 							<div class="card-action">
 								<!--button type="submit" class="btn grad-btn">LEIA MAIS</button-->
@@ -95,15 +97,17 @@
 			</div>
 		</div>
 
-		<div id="test5" class="col s12">
+		<div id="test5" class="col s12 l6">
 			<h1>Contatos</h1>
 			<h3>Siga-nos nas nossas redes sociais</h3>
-			<p>
-				<a href="https://www.facebook.com/Designer-do-Futuro-1912206155694761/"><img src="img/facebook.png" alt="Logotipo Facebook" height="48" width="48"/></a>
-			</p>
-			<p>
-				<a href="https://www.instagram.com/designerdofuturo/"><img src="img/instagram.png" alt="Logotipo Instagram" height="48" width="48"/></a>
-			</p>
+			<div class="row">
+				<div class="col">
+					<a href="https://www.facebook.com/Designer-do-Futuro-1912206155694761/"><img src="img/facebook.png" alt="Logotipo Facebook" height="48" width="48"/></a>
+				</div>
+				<div class="col offset-1">
+					<a href="https://www.instagram.com/designerdofuturo/"><img src="img/instagram.png" alt="Logotipo Instagram" height="48" width="48"/></a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- /container -->
@@ -111,12 +115,13 @@
 	<hr>
 
 	<div class="container">
-		<div class="col-md-offset-2 col-md-8">
+		<div class="col-md-6 col-md-offset-3">
 			<div class="row">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<p class="flow-text">Se interessou pelo nosso conteúdo? Baixe nosso exclusivo e-book: 100 links para o designer do futuro: da programação
-							ao user experience. Se inscreva também na nossa newsletter :) </p>
+						<p class="flow-text">Se interessou pelo nosso conteúdo? <strong>Baixe nosso exclusivo e-book: 100 links para o designer do futuro: da programação
+							ao user experience.</strong></p>
+
 						<form action="cadastro" method="POST" role="form">
 							<div class="input-field col s6">
 								<input id="nome" name="nome" pattern="[A-Za-z\s]{2,}" type="text" class="validate" required title="- Preencha apenas com letras e com mais de 2 caracteres">
@@ -153,32 +158,31 @@
 	<!-- /container -->
 
 	<footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Designer do Futuro</h5>
-                    <p class="grey-text text-lighten-4">Blog com os conceitos básicos de programação em HTML, CSS e JavaScript, também conceitos sobre UX, usabilidade
-                        e tipografia.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Social Networking</h5>
-                    <div class="row">
-                        <div class="col">
-                            <a href="https://www.facebook.com/Designer-do-Futuro-1912206155694761/" class="fa"><img src="img/facebook.png" alt="Logotipo Facebook" height="48" width="48"/></a>
-                        </div>
-                        <div class="col offset-s1">
-                            <a href="https://www.facebook.com/Designer-do-Futuro-1912206155694761/" class="fa"><img src="img/instagram.png" alt="instagram" height="48" width="48" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2017 Copyright Text
-            </div>
-        </div>
-    </footer>
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Designer do Futuro</h5>
+					<p class="grey-text text-lighten-4">Blog com os conceitos básicos de programação em HTML, CSS e JavaScript, também conceitos sobre UX, usabilidade e tipografia.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Social Networking</h5>
+					<div class="row">
+						<div class="col">
+							<a href="https://www.facebook.com/Designer-do-Futuro-1912206155694761/" class="fa"><img src="img/facebook.png" alt="Logotipo Facebook" height="48" width="48"/></a>
+						</div>
+						<div class="col offset-s1">
+							<a href="https://www.facebook.com/Designer-do-Futuro-1912206155694761/" class="fa"><img src="img/instagram.png" alt="instagram" height="48" width="48" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2017 Copyright Text
+			</div>
+		</div>
+	</footer>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="

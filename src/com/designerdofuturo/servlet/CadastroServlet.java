@@ -57,11 +57,11 @@ public class CadastroServlet extends HttpServlet {
             remoteAddr = request.getHeader("X-FORWARDED-FOR");
             if (remoteAddr == null || "".equals(remoteAddr)) {
                 remoteAddr = request.getRemoteAddr();
-                if(remoteAddr.length() <= 15) {
-                	ip = remoteAddr;         	
-                }else {      
-                ip = remoteAddr.substring(0, remoteAddr.indexOf(":"));}
             }
+            if(remoteAddr.length() <= 15) {
+            	ip = remoteAddr;         	
+            }else {      
+            ip = remoteAddr.substring(0, remoteAddr.indexOf(":"));}
         }
  
   

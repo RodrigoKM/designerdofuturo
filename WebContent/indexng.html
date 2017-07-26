@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- Compiled and minified CSS -->
@@ -28,14 +28,21 @@
     <df-menu></df-menu>
 
     <div class="container">
-        <ui-view></ui-view>
+
+        <ui-view autoscroll="false"></ui-view>
+
+        <df-form></df-form>
+
     </div>
 
-    <hr>
-
-    <df-form></df-form>
-
     <df-footer></df-footer>
+
+    <!-- Modal Structure -->
+    <div id="modalform" class="modal">
+        <div class="modal-content">
+            <df-form></df-form>
+        </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -65,6 +72,39 @@
         ga('send', 'pageview');
     </script>
 
+    <!-- Google Code for Cadastro Conversion Page. In your html page, add the snippet and 
+        call goog_report_conversion when someone clicks on the chosen link or button. -->
+
+    <script type="text/javascript">
+            /* <![CDATA[ */
+            goog_snippet_vars = function () {
+                var w = window;
+                w.google_conversion_id = 844040550;
+                w.google_conversion_label = "nIpJCIj1oXMQ5pK8kgM";
+                w.google_remarketing_only = false;
+            }
+            // DO NOT CHANGE THE CODE BELOW.
+            goog_report_conversion = function (url) {
+                goog_snippet_vars();
+                window.google_conversion_format = "3";
+                var opt = new Object();
+                opt.onload_callback = function () {
+                    if (typeof (url) != 'undefined') {
+                        window.location = url;
+                    }
+                }
+                var conv_handler = window['google_trackConversion'];
+                if (typeof (conv_handler) == 'function') {
+                    conv_handler(opt);
+                }
+            }
+/* ]]> */
+    </script>
+
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js">
+
+    </script>
+
     <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <script src="app/app.module.js"></script>
@@ -79,9 +119,7 @@
     <script src="app/header/header.component.js"></script>
     <script src="app/menu/menu.component.js"></script>
     <script src="app/form/form.component.js"></script>
-    <script src="app/modals/modal.component.js"></script>
     <script src="app/footer/footer.component.js"></script>
-
 </body>
 
 </html>

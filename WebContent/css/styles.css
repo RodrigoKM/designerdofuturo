@@ -36,12 +36,12 @@ footer.page-footer {
 }
 
 .tabs .tab a{
-    color:rgb(98, 61, 147);
+    color:rgb(98, 61, 147) !important;
 }
 
 .tabs .tab a:hover,.tabs .tab a.active {
 	background-color:transparent;
-	color: rgb(98, 61, 147);
+	color: rgb(98, 61, 147) !important;
 }
 .tabs .tab.disabled a,.tabs .tab.disabled a:hover {
 	color:rgba(102,147,153,0.7);	
@@ -52,7 +52,7 @@ footer.page-footer {
 }        
 
 hr {
-    margin: 3rem;
+    margin-bottom: 3rem;
 }
 
 article>div>div>p {
@@ -63,35 +63,24 @@ article>div>div>h4 {
     padding-top: 35px;
 }
 
-/* Style all font awesome icons */
-.fa {
-    padding-top: 10px;
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-    opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-/* Instagram */
-.fa-instagram {
-    background: #55ACEE;
-    color: white;
-}
-
 .menu-site {
     margin-bottom: 3rem;
+}
+
+.select {
+    margin-bottom: 20px;
+}
+
+/* label color */
+.input-field label {
+    color: rgb(98, 61, 147) !important;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: rgb(98, 61, 147) !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid rgb(98, 61, 147);
+    box-shadow: 0 1px 0 0 rgb(98, 61, 147);
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <title>Designer do Futuro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="parallax-container hide-on-small-only">
+        <div class="parallax"><img src="img/bannerlogo.jpg"></div>
+    </div>
+
+    <div class="parallax-container hide-on-med-and-up">
+        <div class="parallax"><img class="img-responsive" src="img/banner-mobile.jpg" width="300"></div>
+    </div>
+
+    <df-menu></df-menu>
+
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+
+    <hr>
+
+    <df-form></df-form>
+
+    <df-footer></df-footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-103062881-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/routes/route.js"></script>
+
+    <!-- Service -->
+    <!-- <script src="app/services/"></script> -->
+
+    <!-- Controller -->
+
+    <!-- Component -->
+    <script src="app/header/header.component.js"></script>
+    <script src="app/menu/menu.component.js"></script>
+    <script src="app/form/form.component.js"></script>
+    <script src="app/modals/modal.component.js"></script>
+    <script src="app/footer/footer.component.js"></script>
+
+</body>
+
+</html>

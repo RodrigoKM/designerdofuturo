@@ -20,9 +20,9 @@
     var status = getUrlParameter('status');
 
     if (status === '1') {
-        Materialize.toast('Cadastrado com Sucesso!', 4000, 'green');
+        Materialize.toast('Cadastrado com Sucesso! Você receberá o ebook no seu email em até 24 horas.', 5000, 'green');
     }
     else if(status === '2'){
-        Materialize.toast('Email já cadastrado!', 4000, 'red');
+        Materialize.toast('Email já cadastrado!', 5000, 'red');
     }
 }());

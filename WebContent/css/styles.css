@@ -23,6 +23,10 @@ body {
   background: linear-gradient(to bottom right, rgb(100, 57, 142), rgb(83, 83, 169));
 }
 
+footer {
+    margin-top: 3rem;
+}
+
 footer.page-footer {
     background-color: rgb(98, 61, 147);
 }

@@ -30,9 +30,14 @@
     <div class="container">
 
         <ui-view autoscroll="false"></ui-view>
-
-        <df-form></df-form>
-
+        
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <df-form></df-form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <df-footer></df-footer>
@@ -44,6 +49,8 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
@@ -54,9 +61,6 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
 
     <script src="js/script.js"></script>
 
@@ -76,34 +80,51 @@
         call goog_report_conversion when someone clicks on the chosen link or button. -->
 
     <script type="text/javascript">
-            /* <![CDATA[ */
-            goog_snippet_vars = function () {
-                var w = window;
-                w.google_conversion_id = 844040550;
-                w.google_conversion_label = "nIpJCIj1oXMQ5pK8kgM";
-                w.google_remarketing_only = false;
-            }
-            // DO NOT CHANGE THE CODE BELOW.
-            goog_report_conversion = function (url) {
-                goog_snippet_vars();
-                window.google_conversion_format = "3";
-                var opt = new Object();
-                opt.onload_callback = function () {
-                    if (typeof (url) != 'undefined') {
-                        window.location = url;
-                    }
-                }
-                var conv_handler = window['google_trackConversion'];
-                if (typeof (conv_handler) == 'function') {
-                    conv_handler(opt);
+        /* <![CDATA[ */
+        goog_snippet_vars = function () {
+            var w = window;
+            w.google_conversion_id = 844040550;
+            w.google_conversion_label = "nIpJCIj1oXMQ5pK8kgM";
+            w.google_remarketing_only = false;
+        }
+        // DO NOT CHANGE THE CODE BELOW.
+        goog_report_conversion = function (url) {
+            goog_snippet_vars();
+            window.google_conversion_format = "3";
+            var opt = new Object();
+            opt.onload_callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
                 }
             }
+            var conv_handler = window['google_trackConversion'];
+            if (typeof (conv_handler) == 'function') {
+                conv_handler(opt);
+            }
+        }
 /* ]]> */
     </script>
 
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js">
+    <script>
+        fbq('track', 'Lead', {
+            value: 1.00,
+            currency: 'USD'
+        });
 
+        $('#cadastrar').click(function () {
+            fbq('track', 'AddToCart', {
+                content_ids: ['1234'],
+                content_type: 'product',
+                value: 1.00,
+                currency: 'USD'
+            });
+        });
     </script>
+
+    <!-- ANGULAR JS -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
 
     <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 
@@ -114,6 +135,7 @@
     <!-- <script src="app/services/"></script> -->
 
     <!-- Controller -->
+    <script src="app/artigos/artigos.controller.js"></script>
 
     <!-- Component -->
     <script src="app/header/header.component.js"></script>

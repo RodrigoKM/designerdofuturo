@@ -6,7 +6,8 @@
     ])
         .run(function ($transitions) {
             $transitions.onSuccess({}, function () {
-                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                //document.body.scrollTop = document.documentElement.scrollTop = 0;
             });
         });
 })();

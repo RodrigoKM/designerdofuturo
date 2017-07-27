@@ -52,6 +52,7 @@ footer.page-footer {
 	background-color:transparent;
 	color: rgb(98, 61, 147) !important;
 }
+
 .tabs .tab.disabled a,.tabs .tab.disabled a:hover {
 	color:rgba(102,147,153,0.7);	
 }

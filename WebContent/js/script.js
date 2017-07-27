@@ -34,7 +34,7 @@
     }
     else if (status === '2') {
         Materialize.toast('Email já cadastrado!', 5000, 'red');
-        status = false;
+        status = true;
     }
 
     if (status) {

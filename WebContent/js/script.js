@@ -11,7 +11,8 @@
     });
 
     var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        //        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        var sPageURL = window.location.href.split('?')[1],
             sURLVariables = sPageURL.split('&'),
             sParameterName,
             i;
@@ -29,10 +30,14 @@
 
     if (status === '1') {
         Materialize.toast('Cadastrado com Sucesso! Você receberá o ebook no seu email em até 24 horas.', 5000, 'green');
+        status = false;
     }
     else if (status === '2') {
         Materialize.toast('Email já cadastrado!', 5000, 'red');
+        status = false;
     }
 
-    $('#modalform').modal('open');
+    if (status) {
+        $('#modalform').modal('open');
+    }
 }());

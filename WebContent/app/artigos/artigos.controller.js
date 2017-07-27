@@ -1,23 +1,25 @@
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('app')
         .controller('ArtigosController', ArtigosController);
 
-    ArtigosController.$inject = [];
-    function ArtigosController() {
+    ArtigosController.$inject = ['artigosService', '$stateParams'];
+
+    function ArtigosController(artigosService, $stateParams) {
         var vm = this;
-        vm.img = '';
-        vm.titulo ='';
-        vm.descricao = '';
-        vm.categoria = '';
-        vm.url = '';
 
         activate();
 
         ////////////////
 
-        function activate() { }
+        function activate() {
+            var params = $stateParams.categoria;
+            if (params) {
+                vm.categoria = { categoria: params };
+            }
+            vm.artigos = artigosService.getArtigos();
+        }
     }
 })();

@@ -2,10 +2,10 @@
     <div class="col s12 menu-color">
         <ul class="tabs transparent">
             <li class="tab col m1 hide-on-small-only"></li>
-            <li class="tab col s4 m2"><a ui-sref-active="active" ui-sref="artigos">Home</a></li>
-            <li class="tab col s4 m2"><a ui-sref-active="active">Design</a></li>
-            <li class="tab col s4 m2"><a ui-sref-active="active">E-Books</a></li>
-            <li class="tab col m2 hide-on-small-only">UX/UI</li>
+            <li class="tab col s4 m2"><a ui-sref-active="active" ui-sref="artigos({categoria: null})">Home</a></li>
+            <li class="tab col s4 m2"><a ui-sref-active="active" ui-sref="artigos({categoria: 'design'})">Design</a></li>
+            <li class="tab col s4 m2"><a ui-sref-active="active" ui-sref="artigos({categoria: 'ebook'})">E-Books</a></li>
+            <li class="tab col m2 hide-on-small-only"><!-- <a ui-sref-active="active" ui-sref="artigos({categoria: 'uxui'})">UX/UI</a> --></li>
             <li class="tab col m2 hide-on-small-only">
                 <div class="row socialmedia">
                     <div class="col m6">

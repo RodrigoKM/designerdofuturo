@@ -8,7 +8,11 @@
     ArtigosController.$inject = [];
     function ArtigosController() {
         var vm = this;
-        
+        vm.img = '';
+        vm.titulo ='';
+        vm.descricao = '';
+        vm.categoria = '';
+        vm.url = '';
 
         activate();
 

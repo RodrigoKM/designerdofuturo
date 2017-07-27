@@ -26,6 +26,6 @@
                 templateUrl: 'app/artigos/conteudos/saberprogramacao.html'
             });
 
-        $urlRouterProvider.otherwise('/artigos');
+        $urlRouterProvider.otherwise('/artigos/');
     }
 })();

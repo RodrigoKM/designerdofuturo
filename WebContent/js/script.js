@@ -36,7 +36,3 @@
 
     $('#modalform').modal('open');
 }());
-
-function showModal() {
-    $('#modalform').modal('open');
-}

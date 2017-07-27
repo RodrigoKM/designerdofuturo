@@ -69,7 +69,7 @@ public class CadastroServlet extends HttpServlet {
 		if (testaEmail.testaEmail(email)) {
 
 			//request.getRequestDispatcher("/index.html?status=2").forward(request, response);
-			response.sendRedirect("index.html?status=2");
+			response.sendRedirect("index.html#!/artigos?status=2");
 
 		} else {
 
@@ -84,7 +84,7 @@ public class CadastroServlet extends HttpServlet {
 			}
 			
 			//request.getRequestDispatcher("/index.html?status=1").forward(request, response);
-			response.sendRedirect("index.html?status=1");
+			response.sendRedirect("index.html#!/artigos?status=1");
 
 		}
 

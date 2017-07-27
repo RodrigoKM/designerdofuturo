@@ -11,12 +11,11 @@
     function configRoutes($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('artigos', {
-                url: '/artigos',
-                templateUrl: 'app/artigos/artigos.html'
-            })
-            .state('contatos', {
-                url: '/contatos',
-                templateUrl: 'app/contatos/contatos.html'
+                url: '/artigos/:categoria',
+                templateUrl: 'app/artigos/artigos.html',
+                controller: 'ArtigosController',
+                controllerAs: 'vm',
+                params: { categoria: null }
             })
             .state('dicasdeouro', {
                 url: '/dicas-de-ouro',

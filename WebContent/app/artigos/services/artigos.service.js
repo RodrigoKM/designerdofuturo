@@ -16,7 +16,7 @@
         function getArtigos() {
             return [
                 {
-                    img: 'img/graffiti.jpg',
+                    img: 'img/ebook.png',
                     titulo: 'Baixe Nosso E-Book Grátis',
                     descricao: 'Baixe nosso exclusivo e-book: 50 links para o designer do futuro: da programação ao user experience.',
                     categoria: 'ebook',

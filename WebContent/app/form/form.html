@@ -13,20 +13,22 @@
             <label class="primary-color" for="last_name" data-error="Sobrenome Inválido" data-success="Ok!">Sobrenome</label>
         </div>
     </div>
-
-    <div class="input-field col s12">
-        <input id="email" name="email" type="email" class="validate" required>
-        <label class="primary-color" for="email" data-error="Email Inválido" data-success="Ok!">Email</label>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="email" name="email" type="email" class="validate" required>
+            <label class="primary-color" for="email" data-error="Email Inválido" data-success="Ok!">Email</label>
+        </div>
     </div>
-
-    <div class="col s12">
-        <label class="primary-color">Escolha sua area de interesse:</label>
-        <select class="form-control select-form" name="stack" required>
+    <div class="row">
+        <div class="col s12">
+            <label class="primary-color">Escolha sua area de interesse:</label>
+            <select class="form-control select-form" name="stack" required>
 								<option value="hipster" selected>Design</option>
 								<option value="hacker">Programação</option>
 								<option value="hyper">Marketing</option>
 								<option value="hustler">Vendas</option>
 							</select>
+        </div>
     </div>
     <button id="cadastrar" type="submit" class="btn btn-block grad-btn" onclick="goog_report_conversion()">Cadastrar</button>
 </form>

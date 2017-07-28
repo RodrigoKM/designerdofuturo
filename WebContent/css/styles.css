@@ -100,5 +100,29 @@ article>div>div>h4 {
 }
 
 .card .card-action {
-    border-top: 1px solid white;
+    border-top: 1px;
+}
+
+.ellipse-card {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container { 
+    max-width: 800px !important;
+}
+
+.tabs{
+    max-width: 1000px !important;
+}
+
+.offset-s1 {
+    margin-left: 3.3% !important;
+}
+
+.row {
+    margin-left: 0.10rem !important;
 }

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Facebook Pixel Code -->
@@ -68,7 +68,7 @@
 
         <ui-view autoscroll="false"></ui-view>
 
-        <hr>    
+        <hr>
 
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -159,8 +159,9 @@
             });
         });
 
-        function showModal() {
+        function showModalandUpScreen() {
             $('#modalform').modal('open');
+            $("html, body").animate({ scrollTop: 0 }, 600);
         }
     </script>
 
